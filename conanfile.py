@@ -52,5 +52,7 @@ class Log4qtConan(ConanFile):
       self.cpp_info.libs = [libname]
       self.cpp_info.includedirs = ['include', 'include/log4qt']  # Ordered list of include paths
       self.cpp_info.libdirs = ['lib']  # Directories where libraries can be found
+      if self.options.shared == "False":
+        self.cpp_info.defines.append("LOG4QT_STATIC")
 
         
