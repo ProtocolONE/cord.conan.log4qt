@@ -50,7 +50,7 @@ class Log4qtConan(ConanFile):
       libname += ".lib"
       
       self.cpp_info.libs = [libname]
-      self.cpp_info.includedirs = ['include']  # Ordered list of include paths
+      self.cpp_info.includedirs = ['include', 'include/log4qt']  # Ordered list of include paths
       self.cpp_info.libdirs = ['lib']  # Directories where libraries can be found
 
         
